@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.0.4/echarts.js">
+    </script>
+    <style media="screen">
+      #chart{
+        width:680px;
+        height:680px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart">
+
+    </div>
+    <script type="text/javascript">
+    var nodes = [
+      {name: '1', value: 10000},
+      {name: '2', value: 5000},
+      {name: '3', value: 1000},
+      {name: '4', value: 3000}
+    ]
+    var links = [
+      {source: '1', target: '2', value: 1000},
+      {source: '1', target: '3', value: 900},
+      {source: '2', target: '3', value: 880},
+      {source: '2', target: '4', value: 680},
+      {source: '4', target: '1', value: 800},
+      {source: '3', target: '1', value: 980}
+    ]
+      var myCharts = echarts.init(document.getElementById('chart'))
+      var option = {
+        series: [
+          {
+            type: 'graph',
+            layout: 'force',
+            force: {
+              repulsion: 1000
+            },
+            data: nodes.map((val) => {
+              val.symbolSize = val.value / 200
+              return val
+            }),
+            links: links,
+            categories: nodes,
+            focusNodeAdjacency: true,
+            roam: true,
+            label: {
+                normal: {
+                  show: true,
+                  position: 'top',
+                }
+            },
+            lineStyle: {
+              normal: {
+                color: 'source',
+                curveness: 0,
+                type: "solid"
+              }
+            }
+
+          }
+        ]
+      }
+      myCharts.setOption(option)
+    </script>
+  </body>
+</html>
