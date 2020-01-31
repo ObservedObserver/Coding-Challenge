@@ -1,4 +1,9 @@
 {
+  "name": "ant-quize",
+  "private": true,
+  "author": {
+    "name": "ObservedObserver"
+  },
   "devDependencies": {
     "json-loader": "^0.5.7"
   }

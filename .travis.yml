@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "12"
+script:
+  - npm run leetcode-test
+after_success:
+  - yarn workspace leetcode coverage

@@ -1,0 +1,28 @@
+{
+  "name": "Coding-Challenge",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "leetcode",
+    "ant-quize"
+  ],
+  "description": "![](https://img.shields.io/github/last-commit/ObservedObserver/Coding-Challenge?color=%23E69A8D)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "leetcode-test": "yarn workspace leetcode test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ObservedObserver/Coding-Challenge.git"
+  },
+  "keywords": ["coding challenge", "leetcode", "algorithms"],
+  "author": "ObservedObserver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ObservedObserver/Coding-Challenge/issues"
+  },
+  "homepage": "https://github.com/ObservedObserver/Coding-Challenge#readme"
+}
