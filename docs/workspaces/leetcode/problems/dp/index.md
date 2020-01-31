@@ -17,10 +17,10 @@
 #### 题解
 状态转移方程：
 $$
-F_{i} =  \left\{ \begin{array}{ll}
+F_{i} =  \begin{cases}
 max(F_{i-1} + n_{i}, n_{i}) & i > 0 \\
 n_{i} & i = 0
-\end{array} \right
+\end{cases}
 $$
 
 初始值$F_{0} = nums_{0}$
@@ -56,14 +56,14 @@ $$
 #### 题解
 状态转移方程：
 $$
-F_{i} = \left\{ \begin{array}{ll}
+F_{i} = \begin{cases}
 1 & i = 1 \\
 2 & i = 2 \\
-max(F_{i-1} + n_{i}, n_{i}) & i > 2 \\
-\end{array} \right
+max(n_{i}, F_{i-1} + n_{i}) & i > 2 \\
+\end{cases}
 $$
 
-### 5.最长回文子串
+### 5.最长回文子串(longest palindromic substring)
 > from https://leetcode-cn.com/problems/longest-palindromic-substring
 
 #### 题目
@@ -84,10 +84,10 @@ $$
 
 #### 题解
 $$
-F(i, j) = \left\{ \begin{array}{ll}
-0 & S_{i, j} is not palindromic
-1 & i == j
-2 & i = j - 1 And S_{i} = S_{i + 1}
-F(i + 1, j - 1) + 2 & i > j + 1 And F(i + 1, j - 1) \neq 0
-\end{array} \right
+F_{i, j} = \begin{cases}
+0 & S_{i, j} \quad \text{is not palindromic} \\
+1 & i = j \\
+2 & i = j - 1 \quad \text{and}\quad S_{i} = S_{i + 1} \\
+F_{i + 1, j - 1} + 2 & i > j + 1 \quad \text{and}\quad F_{i + 1, j - 1} \neq 0 \\
+\end{cases}
 $$
