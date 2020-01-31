@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-.DS_Store
-node_modules/
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
-
-# Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.csv
-=======
 # Logs
 logs
 *.log
@@ -53,7 +33,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+node_modules
 jspm_packages/
 
 # Typescript v1 declaration files
@@ -76,4 +56,3 @@ typings/
 
 # dotenv environment variables file
 .env
->>>>>>> 343b3682b2253fcc1f10f0a9a05fb4b05bd46060
