@@ -1,4 +1,4 @@
-const maxSubArray = require('../../build/dp/p53.js').maxSubArray;
+const maxSubArray = require('../../dist/dp/p53.js').maxSubArray;
 const assert = require('assert');
 describe('[p35]', function () {
   it('example1', function () {

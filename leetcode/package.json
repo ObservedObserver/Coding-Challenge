@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "mocha --recursive"
+    "test": "npm run build && mocha --recursive"
   },
   "keywords": [],
   "author": "",
