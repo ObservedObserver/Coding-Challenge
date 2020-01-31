@@ -9,8 +9,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && mocha --recursive",
-    "coverage": "nyc cover _mocha --report lcovonly -- --no-timeouts -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "test": "npm run build && nyc --reporter=html --reporter=text mocha --recursive",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
   "author": "",

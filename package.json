@@ -1,5 +1,5 @@
 {
-  "name": "Coding-Challenge",
+  "name": "coding-challenge",
   "version": "1.0.0",
   "private": true,
   "workspaces": [
@@ -12,7 +12,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "leetcode-test": "yarn workspace leetcode test"
+    "leetcode-test": "yarn workspace leetcode test",
+    "leetcode-coverage": "yarn workspace leetcode coverage"
   },
   "repository": {
     "type": "git",

@@ -4,4 +4,4 @@ node_js:
 script:
   - npm run leetcode-test
 after_success:
-  - yarn workspace leetcode coverage
+  - npm run leetcode-coverage
