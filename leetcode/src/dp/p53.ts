@@ -10,7 +10,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-export function maxSubArray (nums) {
+export function maxSubArray (nums: number[]): number {
   let f = nums.map(n => n);  
   for (let i = 1; i < nums.length; i++) {
     f[i] = Math.max(nums[i], f[i - 1] + nums[i]);

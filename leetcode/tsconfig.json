@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "ES5",
+    "target": "esnext",
     "moduleResolution": "node",
+    "module": "CommonJS",
+    "declaration": true
   },
   "include": ["./src/**/*"]
 }
