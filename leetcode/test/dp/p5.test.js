@@ -1,20 +1,58 @@
 const longestPalindrome = require('../../dist/dp/p5.js').longestPalindrome;
 const assert = require('assert');
 describe('[p35]', function () {
-  it('example1', function () {
-    const result = longestPalindrome('babad')
-    assert.equal(['bab', 'aba'].includes(result), true)
+  describe('iteration', function () {
+    it('example1', function () {
+      const result = longestPalindrome.iteration('babad')
+      assert.equal(['bab', 'aba'].includes(result), true)
+    })
+    it('example2', function () {
+      const result = longestPalindrome.iteration('cbbd')
+      assert.equal(result, 'bb')
+    })
+    it('example3', function () {
+      const result = longestPalindrome.iteration('aaaa')
+      assert.equal(result, 'aaaa')
+    })
+    it('empty value', function () {
+      const result = longestPalindrome.iteration('')
+      assert.equal(result, '')
+    })
   })
-  it('example2', function () {
-    const result = longestPalindrome('cbbd')
-    assert.equal(['bb'].includes(result), true)
+  describe('recursion', function () {
+    it('example1', function () {
+      const result = longestPalindrome.recursion('babad')
+      assert.equal(['bab', 'aba'].includes(result), true)
+    })
+    it('example2', function () {
+      const result = longestPalindrome.recursion('cbbd')
+      assert.equal(result, 'bb')
+    })
+    it('example3', function () {
+      const result = longestPalindrome.recursion('aaaa')
+      assert.equal(result, 'aaaa')
+    })
+    it('empty value', function () {
+      const result = longestPalindrome.recursion('')
+      assert.equal(result, '')
+    })
   })
-  it('example3', function () {
-    const result = longestPalindrome('aaaa')
-    assert.equal(result, 'aaaa')
-  })
-  it('empty value', function () {
-    const result = longestPalindrome('')
-    assert.equal(result, '')
+  describe('centerSpread', function () {
+    it('example1', function () {
+      const result = longestPalindrome.centerSpread('babad')
+      assert.equal(['bab', 'aba'].includes(result), true)
+    })
+    it('example2', function () {
+      const result = longestPalindrome.centerSpread('cbbd')
+      assert.equal(result, 'bb')
+    })
+    it('example3', function () {
+      const result = longestPalindrome.centerSpread('aaaa')
+      assert.equal(result, 'aaaa')
+    })
+    it('empty value', function () {
+      const result = longestPalindrome.centerSpread('')
+      assert.equal(result, '')
+    })
   })
 })
