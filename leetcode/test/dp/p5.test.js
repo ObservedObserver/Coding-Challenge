@@ -1,6 +1,6 @@
 const longestPalindrome = require('../../dist/dp/p5.js').longestPalindrome;
 const assert = require('assert');
-describe('[p35]', function () {
+describe('[p5]', function () {
   describe('iteration', function () {
     it('example1', function () {
       const result = longestPalindrome.iteration('babad')
