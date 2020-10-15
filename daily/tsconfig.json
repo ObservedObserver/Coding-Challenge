@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "declaration": true
+  },
+  "include": ["./**/*"]
+}
